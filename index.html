@@ -33,6 +33,17 @@
             .then((res) => res.json())
             .then((data) => {
                 let output = '<h2>Users</h2>';
+                data.forEach((user) => {
+                    output += `
+                    <ul>
+                        <li>ID: ${user.id}</li>
+                        <li>name: ${user.name}</li>
+                        <li>Email: ${user.email}</li>
+                    </ul>
+                    
+                    `;
+                })
+                document.getElementById('output').innerHTML = output; 
             })
         }
     </script>
