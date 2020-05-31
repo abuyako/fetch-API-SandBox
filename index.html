@@ -78,6 +78,14 @@
                 document.getElementById('output').innerHTML = output; 
             })
         }
+
+        function addPost(e) { // since it a forms we gonna pass event parameter e
+            e.preventDefault(); //prevent from submit from a file
+
+            //Now get the value from the input
+            let title = document.getElementById('title').value;
+            let body = document.getElementById('body').value;
+        }
     </script>
 </body>
 </html> 
