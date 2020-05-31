@@ -13,7 +13,8 @@
 
     <script>
         document.getElementById('getText').addEventListener('click', getText);
-        
+        document.getElementById('getUsers').addEventListener('click', getUsers);
+
         function getText(){
             fetch('sample.text')
             .then((res)=>{
@@ -26,6 +27,8 @@
                 console.log(err);
             })
         }
+
+        
     </script>
 </body>
 </html>
