@@ -12,7 +12,13 @@
         document.getElementById('getText').addEventListener('click', getText);
 
         function getText(){
-            
+            fetch('sample.text')
+            .then((res)=>{
+                return res.text();
+            })
+            .then((data)=>{
+                console.log(data);
+            });
         }
     </script>
 </body>
