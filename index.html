@@ -7,6 +7,8 @@
 </head>
 <body>
     <button id="getText">Get Text</button>
+    
+    <div id="output"></div>
 
     <script>
         document.getElementById('getText').addEventListener('click', getText);
@@ -17,7 +19,7 @@
                 return res.text();
             })
             .then((data)=>{
-                console.log(data);
+                document.getElementById('output').innerHTML = data;
             });
         }
     </script>
