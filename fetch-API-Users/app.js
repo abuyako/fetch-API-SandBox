@@ -7,3 +7,4 @@ function append(parent, el) {
 }
 
 const ul = document.getElementById('authors');
+const url = 'https://randomuser.me/api/?results=10';
