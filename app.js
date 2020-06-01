@@ -69,5 +69,7 @@ document.getElementById('getText').addEventListener('click', getText);
                 body:JSON.stringify({title:title, body:body})
             })
             .then((res) => res.json())
-            .then((data) => console.log(data))
+            .then((data) => {
+                console.log(data);
+            })
         }
