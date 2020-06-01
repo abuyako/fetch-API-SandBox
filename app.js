@@ -74,3 +74,22 @@ function addPost(e) { // since it a forms we gonna pass event parameter e
             console.log(data);
         })
 }
+
+
+function getComments() {
+    fetch('https://jsonplaceholder.typicode.com/comments')
+    .then((res) => res.json())
+    .then((data) => {
+        let output = '<h2 class="mb-4">Comments</h2>';
+        data.forEach((comment) => {
+            output += `
+                <div class="card card-body mb-3">
+                    <h3>${comment.name}</h3>
+                    <p>${comment.email}</p>
+                </div>    
+                
+                `;
+        })
+        document.getElementById('output').innerHTML = output;
+    })
+}
